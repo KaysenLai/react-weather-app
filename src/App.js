@@ -10,24 +10,9 @@ function App() {
     dispatch(getUser());
   }, [dispatch]);
 
-  const user = useSelector((state) => state.user);
-  console.log(user);
+  const user = useSelector((state) => state.user.user);
 
-  const handleIncrease = () => {
-    dispatch(increment());
-  };
-
-  const handleDecrease = () => {
-    dispatch(decrement());
-  };
-
-  return (
-    <div className="App">
-      <div>{count}</div>
-      <button onClick={handleIncrease}>+1</button>
-      <button onClick={handleDecrease}>-1</button>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
