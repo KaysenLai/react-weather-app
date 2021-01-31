@@ -1,4 +1,4 @@
-export const INCREMENT = "increment";
-export const DECREMENT = "decrement";
-export const GET_USER = "get_user";
-export const SET_USER = "set_user";
+export const SET_CURRENT_WEATHER = 'setCurrentWeather';
+export const STORE_CURRENT_WEATHER = 'storeCurrentWeather';
+export const STORE_HOURLY_WEATHER = 'reqHourlyWeather';
+export const STORE_DAILY_WEATHER = 'reqDailyWeather';

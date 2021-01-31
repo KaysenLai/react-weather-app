@@ -1,10 +1,8 @@
-import { combineReducers } from "redux";
-import counterReducer from "./counter";
-import userReducer from "./user";
+import { combineReducers } from 'redux';
+import weatherReducer from './weather';
 
 const reducers = combineReducers({
-  counter: counterReducer,
-  user: userReducer,
+  weather: weatherReducer,
 });
 
 export default reducers;

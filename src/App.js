@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, getUser } from "./store/actions/actionCreator";
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch, useStore } from 'react-redux';
+
+import { REQUEST_CURRENT_WEATHER, REQUEST_HOURLY_WEATHER } from './store/sagas/asyncActionTypes';
 
 function App() {
-  const count = useSelector((state) => state.counter.counter);
+  const store = useStore();
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   dispatch(getUser());
+  // }, [dispatch]);
+  const action = (type) => store.dispatch({ type });
+
   useEffect(() => {
-    dispatch(getUser());
+    action(REQUEST_HOURLY_WEATHER);
   }, [dispatch]);
 
-  const user = useSelector((state) => state.user.user);
+  // const user = useSelector((state) => state.user.user);
 
-  return <div className="App"></div>;
+  return <div className="App">ddd</div>;
 }
 
 export default App;
