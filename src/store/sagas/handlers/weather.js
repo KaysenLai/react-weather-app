@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
 import { requestCurrentWeather, requestDailyWeather, requestHourlyWeather } from '../requests/weather';
-import { storeCurrentWeather } from '../../actions/actionCreator';
+import { storeCurrentWeather, storeDailyWeather, storeHourlyWeather } from '../../actions/actionCreator';
 import { translateWeatherText, translateWinDir } from './untility';
 import { REQUEST_CURRENT_WEATHER, REQUEST_DAILY_WEATHER, REQUEST_HOURLY_WEATHER } from '../asyncActionTypes';
 
@@ -21,8 +21,7 @@ export function* asyncHandleWeather(action) {
     case REQUEST_HOURLY_WEATHER: {
       try {
         const hourlyWeatherResponse = yield call(requestHourlyWeather, '116.41,39.92');
-        console.log(parseHourlyData(hourlyWeatherResponse));
-        yield put(storeCurrentWeather(parseHourlyData(hourlyWeatherResponse)));
+        yield put(storeHourlyWeather(parseHourlyData(hourlyWeatherResponse)));
       } catch (e) {
         console.log(e);
       }
@@ -31,8 +30,9 @@ export function* asyncHandleWeather(action) {
 
     case REQUEST_DAILY_WEATHER: {
       try {
-        const dailyWeatherResponse = yield call(requestHourlyWeather, '116.41,39.92');
-        yield put(storeCurrentWeather(parseCurrentData(dailyWeatherResponse)));
+        const dailyWeatherResponse = yield call(requestDailyWeather, '116.41,39.92');
+        console.log(parseDailyData(dailyWeatherResponse));
+        yield put(storeDailyWeather(parseDailyData(dailyWeatherResponse)));
       } catch (e) {
         console.log(e);
       }
@@ -56,5 +56,18 @@ function parseHourlyData(hourlyWeatherResponse) {
   const hourlyForecasts = hourlyWeatherResponse.data.hourly;
   return hourlyForecasts.map((item) => {
     return { raindrop: item.pop, icon: item.icon, time: item.fxTime, text: translateWeatherText(item.text) };
+  });
+}
+
+function parseDailyData(dailyWeatherResponse) {
+  const dailyForecasts = dailyWeatherResponse.data.daily;
+  return dailyForecasts.map((item) => {
+    return {
+      tempMax: item.tempMax,
+      tempMin: item.tempMin,
+      iconDay: item.iconDay,
+      date: item.fxDate,
+      textDay: translateWeatherText(item.textDay),
+    };
   });
 }

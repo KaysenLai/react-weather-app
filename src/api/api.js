@@ -8,4 +8,4 @@ export const getHourlyWeatherApi = (coordinates) =>
   `https://api.qweather.com/v7/weather/24h?location=${coordinates}&key=${prod_weatherKey}`;
 
 export const getDailyWeatherApi = (coordinates) =>
-  `https://devapi.qweather.com/v7/weather/7d?location=${coordinates}&key=${dev_weatherKey}`;
+  `https://devapi.qweather.com/v7/weather/3d?location=${coordinates}&key=${dev_weatherKey}`;

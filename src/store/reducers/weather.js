@@ -1,5 +1,5 @@
 import * as actions from '../actions/actionTypes';
-import { STORE_CURRENT_WEATHER } from '../actions/actionTypes';
+import { STORE_CURRENT_WEATHER, STORE_DAILY_WEATHER, STORE_HOURLY_WEATHER } from '../actions/actionTypes';
 
 // const defaultWeatherState = {
 //   currentTemp: undefined,
@@ -17,6 +17,7 @@ const defaultWeatherState = {
   humidity: undefined,
   windDir: undefined,
   windSpeed: undefined,
+  hourlyForecast: undefined,
 };
 
 const initialState = {
@@ -28,9 +29,15 @@ const initialState = {
 
 // Return the state
 export default (state = initialState, action) => {
-  if (action.type === STORE_CURRENT_WEATHER) {
-    console.log(action.payload);
-    return { ...state, homePageWeather: action.payload };
+  switch (action.type) {
+    case STORE_CURRENT_WEATHER:
+      return { ...state, homePageWeather: action.payload };
+    case STORE_HOURLY_WEATHER:
+      return { ...state, homePageWeather: { ...state.homePageWeather, hourlyForecast: action.payload } };
+    case STORE_DAILY_WEATHER:
+      console.log(state.homePageWeather);
+      return { ...state, homePageWeather: { ...state.homePageWeather, dailyForecast: action.payload } };
+    default:
+      return state;
   }
-  return state;
 };
