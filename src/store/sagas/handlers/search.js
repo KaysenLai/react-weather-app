@@ -3,6 +3,7 @@ import { call, put } from 'redux-saga/effects';
 import { storeSearchCity } from '../../actions/actionCreator';
 import { requestSearchCity } from '../requests/search';
 import { convertLocation } from '../utils/untility';
+import { getPresetImages } from '../utils/presetImages';
 
 export function* asyncHandleSearch(action) {
   if (action.type === REQUEST_SEARCH_CITY) {
@@ -23,6 +24,7 @@ const parseSearchCity = (searchCityResponse) => {
       cityName: item.text,
       coordinates: convertLocation(item.geometry.coordinates),
       location: item.place_name,
+      presetImage: getPresetImages(item.text),
     };
   });
 };
