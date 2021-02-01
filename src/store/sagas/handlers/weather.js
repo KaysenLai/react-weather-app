@@ -4,8 +4,6 @@ import { storeCurrentWeather, storeDailyWeather, storeHourlyWeather } from '../.
 import { translateWeatherText, translateWinDir } from '../utils/translate';
 import { REQUEST_CURRENT_WEATHER, REQUEST_DAILY_WEATHER, REQUEST_HOURLY_WEATHER } from '../asyncActionTypes';
 
-const fakeCoordinate = '116.41,39.92';
-
 export function* asyncHandleWeather(action) {
   switch (action.type) {
     case REQUEST_CURRENT_WEATHER: {
@@ -31,7 +29,6 @@ export function* asyncHandleWeather(action) {
     case REQUEST_DAILY_WEATHER: {
       try {
         const dailyWeatherResponse = yield call(requestDailyWeather, '116.41,39.92');
-        console.log(parseDailyData(dailyWeatherResponse));
         yield put(storeDailyWeather(parseDailyData(dailyWeatherResponse)));
       } catch (e) {
         console.log(e);

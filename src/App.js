@@ -15,14 +15,12 @@ function App() {
   const action = (type) => store.dispatch({ type });
 
   useEffect(() => {
-    // action(REQUEST_CURRENT_WEATHER);
-    // action(REQUEST_HOURLY_WEATHER);
-    // action(REQUEST_DAILY_WEATHER);
+    action(REQUEST_CURRENT_WEATHER);
+    action(REQUEST_HOURLY_WEATHER);
+    action(REQUEST_DAILY_WEATHER);
     // action(REQUEST_SEARCH_CITY);
     action(REQUEST_ONE_IMG);
   }, [dispatch]);
-
-  // const user = useSelector((state) => state.user.user);
 
   return <div className="App">ddd</div>;
 }
