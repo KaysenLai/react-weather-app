@@ -31,11 +31,10 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case STORE_CURRENT_WEATHER:
-      return { ...state, homePageWeather: action.payload };
+      return { ...state, homePageWeather: { ...state.homePageWeather, ...action.payload } };
     case STORE_HOURLY_WEATHER:
       return { ...state, homePageWeather: { ...state.homePageWeather, hourlyForecast: action.payload } };
     case STORE_DAILY_WEATHER:
-      console.log(state.homePageWeather);
       return { ...state, homePageWeather: { ...state.homePageWeather, dailyForecast: action.payload } };
     default:
       return state;
