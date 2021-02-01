@@ -137,3 +137,5 @@ const translateWinDir = (windDirectionCN) => {
   const index = windDirCN.indexOf(windDirectionCN);
   return index === -1 ? windDirectionCN : windDirEN[index];
 };
+
+export { translateWeatherText, translateWinDir };

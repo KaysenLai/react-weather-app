@@ -1,7 +1,7 @@
 import { call, put } from 'redux-saga/effects';
 import { requestCurrentWeather, requestDailyWeather, requestHourlyWeather } from '../requests/weather';
 import { storeCurrentWeather, storeDailyWeather, storeHourlyWeather } from '../../actions/actionCreator';
-
+import { translateWeatherText, translateWinDir } from '../utils/translate';
 import { REQUEST_CURRENT_WEATHER, REQUEST_DAILY_WEATHER, REQUEST_HOURLY_WEATHER } from '../asyncActionTypes';
 
 const fakeCoordinate = '116.41,39.92';

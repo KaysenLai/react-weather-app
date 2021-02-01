@@ -20,7 +20,12 @@ export const storeSearchCity = (searchedCities) => ({
   payload: searchedCities,
 });
 
-export const storeSelectedCity = (selectedCity) => ({
-  type: actions.STORE_SELECTED_CITY,
-  payload: selectedCity,
+export const storeOneImg = (imgId) => ({
+  type: actions.STORE_ONE_IMG,
+  payload: imgId,
+});
+
+export const storeSearchImg = (cityName) => ({
+  type: actions.STORE_SEARCH_IMG,
+  payload: cityName,
 });
