@@ -1,21 +1,20 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import ProgressiveImage from 'react-progressive-bg-image';
+import ProgressiveImage from '../ProgressiveImage/ProgressiveImage';
 import './MainBackGround.scss';
 
 const mapStateToProps = (state) => {
   return {
-    regularSizeImg: state.images.currentImages.mainImage.urls.full,
-    smallSizeImg: state.images.currentImages.mainImage.urls.small,
+    fullImage: state.images.currentImages.mainImage.urls.full,
+    thumbnail: state.images.currentImages.mainImage.urls.small,
   };
 };
 
 const MainBackGround = (props) => {
-  const { regularSizeImg, smallSizeImg } = props;
+  const { fullImage, thumbnail } = props;
   return (
     <div className="main-background">
       <div className="main-background__mask" />
-      <ProgressiveImage src={regularSizeImg} placeholder={smallSizeImg} style={{}} />
+      <ProgressiveImage className="main-background" src={fullImage} thumbnailSrc={thumbnail} />
     </div>
   );
 };

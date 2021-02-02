@@ -1,17 +1,15 @@
-.cover{
-	.progressive-img {
-		width: 300px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+.progressive-img {
+	position: absolute;
+	width: 100%;
+	object-fit: cover;
 
-		&-thumbnail {
-			position: absolute;
-			filter: blur(5px);
-			transition: opacity ease-in 1000ms;
-			clip-path: inset(0);
-		}
+	&-thumbnail {
+		object-fit:cover;
+		width:100%;
+		position: absolute;
+		filter: blur(10px);
+		transition: opacity ease-in 1000ms;
+		clip-path: inset(0);
 	}
 }
 

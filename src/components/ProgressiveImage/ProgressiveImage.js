@@ -10,10 +10,10 @@ const omit = (obj, omitKey) =>
   }, {});
 
 const ProgressiveImage = (props) => {
+  const { className, src, thumbnailSrc, alt } = props;
   const [isFullImgLoaded, setIsFullImgLoaded] = useState(false);
-  const { src, className, overlaySrc, alt } = props;
 
-  const filteredProps = omit(props, 'overlaySrc');
+  const filteredProps = omit(props, 'thumbnailSrc');
   return (
     <div className={className}>
       <img
@@ -29,7 +29,7 @@ const ProgressiveImage = (props) => {
         {...filteredProps}
         className="progressive-img-thumbnail"
         {...(isFullImgLoaded && { style: { opacity: '0' } })}
-        src={overlaySrc}
+        src={thumbnailSrc}
         alt={alt}
       />
     </div>
