@@ -1,0 +1,10 @@
+@import "../../assets/scss/variables";
+
+.save-boxs {
+	background-color: lemonchiffon;
+	width: 100%;
+
+	.save-box {
+		margin-top: $cardGap
+	}
+}

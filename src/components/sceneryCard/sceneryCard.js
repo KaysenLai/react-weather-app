@@ -1,6 +1,5 @@
-import './dailyWeathers.scss';
-
 import React from 'react';
+import './sceneryCard.scss';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
@@ -8,9 +7,9 @@ const mapStateToProps = (state) => ({
   user: state.user,
 });
 
-const DailyWeathers = (props) => {
+const SceneryCard = (props) => {
   const { primaryColor } = props;
-  return <div>{primaryColor}</div>;
+  return <div className="scenery-card">{primaryColor}</div>;
 };
 
-export default connect(mapStateToProps)(DailyWeathers);
+export default connect(mapStateToProps)(SceneryCard);

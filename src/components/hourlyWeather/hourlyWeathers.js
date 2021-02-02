@@ -1,4 +1,4 @@
-import './hourlyWeather.scss';
+import './hourlyWeathers.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
@@ -8,9 +8,9 @@ const mapStateToProps = (state) => ({
   user: state.user,
 });
 
-const HourlyWeather = (props) => {
+const HourlyWeathers = (props) => {
   const { primaryColor } = props;
   return <div>{primaryColor}</div>;
 };
 
-export default connect(mapStateToProps)(HourlyWeather);
+export default connect(mapStateToProps)(HourlyWeathers);

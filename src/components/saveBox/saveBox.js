@@ -1,4 +1,4 @@
-import './dailyWeathers.scss';
+import './saveBox.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
@@ -8,9 +8,9 @@ const mapStateToProps = (state) => ({
   user: state.user,
 });
 
-const DailyWeathers = (props) => {
+const SaveBox = (props) => {
   const { primaryColor } = props;
-  return <div>{primaryColor}</div>;
+  return <div className="save-box">{primaryColor}</div>;
 };
 
-export default connect(mapStateToProps)(DailyWeathers);
+export default connect(mapStateToProps)(SaveBox);
