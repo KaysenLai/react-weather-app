@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './Navbar.scss';
+import './MainNav.scss';
 const mapStateToProps = (state) => ({
   primaryColor: state.theme.primaryColor,
 });
 
-const Navbar = (props) => {
+const MainNav = (props) => {
   const { primaryColor } = props;
   const style = { backgroundColor: primaryColor };
   return (
@@ -17,4 +17,4 @@ const Navbar = (props) => {
   );
 };
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps)(MainNav);

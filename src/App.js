@@ -8,9 +8,9 @@ import {
   REQUEST_ONE_IMG,
   REQUEST_SEARCH_CITY,
 } from './store/sagas/asyncActionTypes';
-import Navbar from './components/Navbar/Navbar';
-import ProgressiveImage from './components/ProgressiveImage/ProgressiveImage';
-import MainBackGround from './components/MainBackGround/MainBackGround';
+
+import MainNav from './components/MainNav/MainNav';
+import Weather from './pages/Weather/Weather';
 
 function App() {
   const store = useStore();
@@ -27,7 +27,8 @@ function App() {
 
   return (
     <div>
-      <MainBackGround />
+      <MainNav />
+      <Weather />
     </div>
   );
 }

@@ -1,0 +1,25 @@
+@import '../../assets/scss/variables';
+
+.weather-card {
+	background-color: pink;
+	margin: 100px auto 0 auto;
+	width: $appWidthXXL;
+	height: 680px;
+	border-radius: 20px;
+	box-sizing: border-box;
+	display: flex;
+	padding: 40px 45px;
+
+	&__content {
+		flex: 1;
+		height: 100%;
+		background-color: aquamarine;
+		margin-right: $cardGap;
+	}
+
+	&__sidebar {
+		flex: 1;
+		height: 100%;
+		background-color: darkseagreen;
+	}
+}
