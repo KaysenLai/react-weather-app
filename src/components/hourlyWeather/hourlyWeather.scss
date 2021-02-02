@@ -1,0 +1,17 @@
+@import "../../assets/scss/variables";
+
+.hourly-weather {
+	background-color: #dbdbdb;
+	height: 115px;
+
+	h2 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		line-height: 30px;
+	}
+
+	&__card-wrap {
+		list-style: none;
+		display: flex;
+	}
+}

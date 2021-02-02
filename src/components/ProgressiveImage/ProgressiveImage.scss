@@ -4,8 +4,8 @@
 	object-fit: cover;
 
 	&-thumbnail {
-		object-fit:cover;
-		width:100%;
+		object-fit: cover;
+		width: min-content;
 		position: absolute;
 		filter: blur(80px);
 		transition: opacity ease-in 1000ms;

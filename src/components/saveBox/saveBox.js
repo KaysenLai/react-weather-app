@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 
 const SaveBox = (props) => {
   const { primaryColor } = props;
-  return <div className="save-box">{primaryColor}</div>;
+  return <div className="save-box"></div>;
 };
 
 export default connect(mapStateToProps)(SaveBox);

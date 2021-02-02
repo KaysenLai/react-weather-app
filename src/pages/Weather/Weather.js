@@ -5,7 +5,7 @@ import WeatherCard from '../../components/WeatherCard/WeatherCard';
 
 const Weather = (props) => {
   return (
-    <div className="Weather">
+    <div className="weather">
       <WeatherCard />
       <MainBackGround />
     </div>

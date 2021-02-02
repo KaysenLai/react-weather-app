@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 
 const CurrentWeather = (props) => {
   const { primaryColor } = props;
-  return <div>{primaryColor}</div>;
+  return <div className="current-weather" style={{ backgroundColor: primaryColor }}></div>;
 };
 
 export default connect(mapStateToProps)(CurrentWeather);

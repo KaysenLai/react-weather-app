@@ -1,0 +1,19 @@
+@import "../../assets/scss/variables";
+
+.daily-weather {
+	background-color: white;
+	height: 110px;
+	width: 300px;
+	border-radius: $borderRadius;
+	box-shadow: 2px 4px 12px -5px rgba(0,0,0,.2);
+
+	h2 {
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	&__card-wrap {
+		list-style: none;
+		display: flex;
+	}
+}

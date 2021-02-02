@@ -1,10 +1,12 @@
 @import '../../assets/scss/variables';
+@import '../../assets/scss/media-queries';
 
 .weather-card {
-	background-color: pink;
+	background-color: $bg-white;
 	margin: 100px auto 0 auto;
-	width: $appWidthXXL;
-	height: 680px;
+	width: 90%;
+	max-width: $appWidthXXL;
+
 	border-radius: 20px;
 	box-sizing: border-box;
 	display: flex;
@@ -13,13 +15,132 @@
 	&__content {
 		flex: 6.4;
 		height: 100%;
-		background-color: aquamarine;
 		margin-right: $cardGap;
+
+		.hourly-weathers {
+			margin: 15px 0;
+		}
 	}
 
 	&__sidebar {
 		flex: 3.6;
 		height: 100%;
-		background-color: darkseagreen;
+
+		.save-boxs {
+			.save-box {
+				margin-top: $cardGap
+			}
+		}
+	}
+
+	@include MQ(XL) {
+		max-width: $appWidthXL;
+	}
+
+	@include MQ(M) {
+		flex-direction: column;
+		padding: 30px 35px;
+
+		&__content {
+			flex: 1;
+			margin-right: 0;
+
+			.hourly-weathers {
+				margin: 20px 0;
+				h2 {
+					line-height: 30px;
+				}
+
+				&__card-wrap {
+					display: grid;
+					background-color: pink;
+					grid-template-columns: 1fr 1fr 1fr ;
+					grid-template-rows: 1fr 1fr;
+					grid-gap: 5px;
+					padding: 0;
+					height: unset;
+					li {
+						flex: unset;
+					}
+				}
+
+			}
+
+			.daily-weathers {
+				h2 {
+					line-height: 30px;
+				}
+			}
+		}
+
+		&__sidebar {
+			flex: 1;
+			display: flex;
+
+			.scenery-card {
+				margin-top: $cardGap;
+				margin-right: 20px;
+				height: 230px;
+			}
+
+			.save-boxs {
+				.save-box {
+					height: 105px;
+
+					&:nth-of-type(2) {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	@include MQ(S) {
+		width: 87%;
+		padding: 20px 25px;
+		&__content {
+			flex: 1;
+			margin-right: 0;
+
+			.hourly-weathers {
+				&__card-wrap {
+					.hourly-weather {
+						height: 80px;
+					}
+				}
+
+			}
+
+			.daily-weathers {
+				height: auto;
+				&__card-wrap {
+					height: auto;
+					grid-template-columns: 1fr;
+					.daily-weather {
+						height: 80px;
+					}
+				}
+			}
+		}
+
+		&__sidebar {
+
+			display: unset;
+
+			.scenery-card {
+				margin-top: $cardGap;
+				margin-right: 20px;
+				height: 230px;
+			}
+
+			.save-boxs {
+				.save-box {
+					height: 105px;
+					&:nth-of-type(2) {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
 	}
 }

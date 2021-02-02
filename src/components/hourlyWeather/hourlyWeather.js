@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 
 const HourlyWeather = (props) => {
   const { primaryColor } = props;
-  return <div>{primaryColor}</div>;
+  return <div className="hourly-weather"></div>;
 };
 
 export default connect(mapStateToProps)(HourlyWeather);

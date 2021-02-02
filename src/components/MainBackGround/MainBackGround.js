@@ -2,12 +2,10 @@ import { connect } from 'react-redux';
 import ProgressiveImage from '../ProgressiveImage/ProgressiveImage';
 import './MainBackGround.scss';
 
-const mapStateToProps = (state) => {
-  return {
-    fullImage: state.images.currentImages.mainImage.urls.full,
-    thumbnail: state.images.currentImages.mainImage.urls.small,
-  };
-};
+const mapStateToProps = (state) => ({
+  fullImage: state.images.currentImages.mainImage.urls.full,
+  thumbnail: state.images.currentImages.mainImage.urls.small,
+});
 
 const MainBackGround = (props) => {
   const { fullImage, thumbnail } = props;

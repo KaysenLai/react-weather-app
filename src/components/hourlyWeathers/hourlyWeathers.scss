@@ -1,0 +1,35 @@
+@import "../../assets/scss/variables";
+
+.hourly-weathers {
+
+	width: 100%;
+
+	h2 {
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 25px;
+	}
+
+	&__card-wrap {
+		height: 135px;
+		list-style: none;
+		display: flex;
+		padding: 0 5px;
+		background-color: white;
+		border-radius: $borderRadius;
+		align-items: center;
+		box-shadow: 2px 4px 12px -5px rgba(0,0,0,.2);
+
+		li {
+			flex: 1;
+			margin: 0 5px;
+
+			.hourly-weather {
+
+			}
+		}
+		.hourly-weather {
+			width: 100%;
+		}
+	}
+}
