@@ -1,4 +1,4 @@
-import { REQUEST_SEARCH_CITY } from '../asyncActionTypes';
+import { REQUEST_SEARCH_CITY } from '../actions/asyncActionTypes';
 import { call, put } from 'redux-saga/effects';
 import { storeSearchCity } from '../../actions/actionCreator';
 import { requestSearchCity } from '../requests/search';
@@ -7,8 +7,10 @@ import { getPresetImages } from '../utils/presetImages';
 
 export function* asyncHandleSearch(action) {
   if (action.type === REQUEST_SEARCH_CITY) {
+    const location = action.payload;
     try {
-      const searchCityResponse = yield call(requestSearchCity, 'syd');
+      if (!location) return;
+      const searchCityResponse = yield call(requestSearchCity, action.payload);
       yield put(storeSearchCity(parseSearchCity(searchCityResponse)));
     } catch (e) {
       console.log(e);

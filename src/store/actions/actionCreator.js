@@ -20,6 +20,10 @@ export const storeSearchCity = (searchedCities) => ({
   payload: searchedCities,
 });
 
+export const clearSearchCity = () => ({
+  type: actions.CLEAT_SEARCH_CITY,
+});
+
 export const storeOneImg = (imgId) => ({
   type: actions.STORE_ONE_IMG,
   payload: imgId,

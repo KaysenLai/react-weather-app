@@ -7,7 +7,7 @@ import {
   storeOneImg,
   storeSearchImg,
 } from '../../actions/actionCreator';
-import { REQUEST_ONE_IMG, REQUEST_SEARCH_IMG } from '../asyncActionTypes';
+import { REQUEST_ONE_IMG, REQUEST_SEARCH_IMG } from '../actions/asyncActionTypes';
 import { requestOneImg, requestSearchImg } from '../requests/image';
 
 export function* asyncHandleImage(action) {

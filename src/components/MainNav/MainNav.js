@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './MainNav.scss';
+import SearchBar from '../SearchBar/SearchBar';
 const mapStateToProps = (state) => ({
   primaryColor: state.theme.primaryColor,
 });
@@ -12,6 +13,7 @@ const MainNav = (props) => {
     <nav className="main-nav" style={style}>
       <div className="main-nav__container">
         <h2>Scenery℃</h2>
+        <SearchBar />
       </div>
     </nav>
   );

@@ -7,7 +7,7 @@ import {
   REQUEST_ONE_IMG,
   REQUEST_SEARCH_CITY,
   REQUEST_SEARCH_IMG,
-} from './asyncActionTypes';
+} from './actions/asyncActionTypes';
 import { asyncHandleSearch } from './handlers/search';
 import { asyncHandleImage } from './handlers/image';
 
