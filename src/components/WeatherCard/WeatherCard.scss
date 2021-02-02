@@ -11,14 +11,14 @@
 	padding: 40px 45px;
 
 	&__content {
-		flex: 1;
+		flex: 6.4;
 		height: 100%;
 		background-color: aquamarine;
 		margin-right: $cardGap;
 	}
 
 	&__sidebar {
-		flex: 1;
+		flex: 3.6;
 		height: 100%;
 		background-color: darkseagreen;
 	}
