@@ -1,0 +1,22 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/media-queries";
+
+.home {
+	background: pink;
+	width: $appWidthXXL;
+	height: 700px;
+	margin: 50px auto;
+	border-radius: $borderRadius;
+	padding: 30px;
+	display: flex;
+	&__left-container{
+		flex: 1;
+		background-color: rosybrown;
+		margin-right: $cardWidth;
+	}
+
+	&__right-container {
+		flex: 1;
+		background-color: cadetblue;
+	}
+}

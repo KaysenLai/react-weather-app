@@ -9,7 +9,6 @@ export function* asyncHandleSearch(action) {
   if (action.type === REQUEST_SEARCH_CITY) {
     try {
       const searchCityResponse = yield call(requestSearchCity, 'syd');
-      console.log(parseSearchCity(searchCityResponse));
       yield put(storeSearchCity(parseSearchCity(searchCityResponse)));
     } catch (e) {
       console.log(e);

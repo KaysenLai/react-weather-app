@@ -13,7 +13,6 @@ const presetImages = {
 };
 
 export const getPresetImages = (cityName) => {
-  console.log('preset');
   const lowerCaseCityName = cityName.toLowerCase();
   const noSpaceCityName = lowerCaseCityName.replace(' ', '_');
   return presetImages.hasOwnProperty(noSpaceCityName) ? presetImages[noSpaceCityName] : '';

@@ -37,8 +37,9 @@ export function* asyncHandleImage(action) {
 
 function parseOneImgResponse(oneImgResponse) {
   const { urls, links } = oneImgResponse.data;
-  console.log({ urls, links });
-  return { urls, links };
+  const properSizeFull = urls.full + '&w=1920';
+  const properSizeUrls = { ...urls, full: properSizeFull };
+  return { urls: properSizeUrls, links };
 }
 
 // function parseSearchImg(dailyWeatherResponse) {

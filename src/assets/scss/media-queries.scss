@@ -1,0 +1,43 @@
+/*********************
+*media queries
+***********************/
+$XS: 320px; //mobile small
+$S: 425px; //mobile
+$M: 768px; //tablet
+$L: 1024px; //tablet horizontal
+$XL: 1440px; //Desktop HD
+$XXL: 1920px; //Desktop 4K
+
+
+@mixin MQ($canvas) {
+  @if $canvas==XS {
+	@media screen and (max-width: $XS) {
+	  @content;
+	}
+  }
+  @if $canvas==S {
+	@media screen and (max-width: $S) {
+	  @content;
+	}
+  }
+  @else if $canvas==M {
+	@media screen and (max-width: $M) {
+	  @content;
+	}
+  }
+  @else if $canvas==L {
+	@media screen and (max-width: $L) {
+	  @content;
+	}
+  }
+  @else if $canvas==XL {
+	@media screen and (max-width: $XL) {
+	  @content;
+	}
+  }
+  @else if $canvas==XXL {
+	@media screen and (max-width: $XXL) {
+	  @content;
+	}
+  }
+}

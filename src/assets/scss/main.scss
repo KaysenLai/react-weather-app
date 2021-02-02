@@ -1,4 +1,19 @@
 @import "variables";
-@import "mixins";
+@import "media-queries";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-@import "home";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  //h2, h3, h4, h5, h6 {
+	//font-weight: normal;
+  //}
+	font-family: 'Poppins', sans-serif;
+  img {
+	display:block
+  }
+}
