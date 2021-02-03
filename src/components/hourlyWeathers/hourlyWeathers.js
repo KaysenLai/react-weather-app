@@ -6,10 +6,11 @@ import HourlyWeather from '../hourlyWeather/hourlyWeather';
 
 const mapStateToProps = (state) => ({
   hourlyForecast: state.weather.homePageWeather.hourlyForecast,
+  text: state.weather.homePageWeather.text,
 });
 
 const HourlyWeathers = (props) => {
-  const { primaryColor, hourlyForecast } = props;
+  const { text, hourlyForecast } = props;
   return (
     <div className="hourly-weathers">
       <h2>Hourly Forecast for xx</h2>
@@ -18,7 +19,7 @@ const HourlyWeathers = (props) => {
           (item, index) =>
             index <= 5 && (
               <li key={'hourlyWeather:' + index}>
-                <HourlyWeather temp={item.temp} icon={item.icon} time={item.time} />
+                <HourlyWeather title={text} temp={item.temp} icon={item.icon} time={item.time} />
               </li>
             ),
         )}

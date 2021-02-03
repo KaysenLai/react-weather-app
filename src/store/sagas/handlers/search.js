@@ -22,10 +22,19 @@ const parseSearchCity = (searchCityResponse) => {
   const places = searchCityResponse.data.features;
   return places.map((item) => {
     return {
-      cityName: item.text,
+      cityName: handleCityName(item.text),
       coordinates: convertLocation(item.geometry.coordinates),
       location: item.place_name,
-      presetImage: getPresetImages(item.text),
+      presetImage: getPresetImages(handleCityName(item.text)),
     };
   });
 };
+
+function handleCityName(cityName) {
+  const splitName = cityName.split(' ');
+  if (splitName.length === 2 && splitName[1] === 'Shi') {
+    console.log(splitName[0]);
+    return splitName[0];
+  }
+  return cityName;
+}

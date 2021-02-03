@@ -13,16 +13,19 @@ const SearchBar = (props) => {
   const { cityList } = props;
   const [searchText, setSearchText] = useState('');
   const [isFocus, setIsFocus] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
   const store = useStore();
-
-  // useEffect(async () => {
-  //   await store.dispatch(asyncSearchCity(searchText));
-  //   console.log(store.getState());
-  // }, [dispatch, searchText]);
 
   const handleTextChange = (e) => {
     setSearchText(e.target.value);
-    store.dispatch(asyncRequestSearchCity(e.target.value));
+    if (!isSearching) {
+      setIsSearching(true);
+      setTimeout(() => {
+        store.dispatch(asyncRequestSearchCity(searchText));
+        console.log(e.target.value);
+        setIsSearching(false);
+      }, 1000);
+    }
   };
 
   const handleInputFocus = () => setIsFocus(true);

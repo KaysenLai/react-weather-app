@@ -1,6 +1,6 @@
 import { CLEAT_SEARCH_CITY, STORE_CLICKED_CITY, STORE_SEARCH_CITY } from '../actions/actionTypes';
 
-const initialState = { searchResponseList: [] };
+const initialState = { searchResponseList: [], clickedCity: { location: 'Brisbane, Queensland, Australia' } };
 
 export default (state = initialState, action) => {
   switch (action.type) {

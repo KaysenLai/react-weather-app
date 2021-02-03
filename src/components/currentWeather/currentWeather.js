@@ -14,7 +14,7 @@ const mapStateToProps = (state) => ({
   humidity: state.weather.homePageWeather.humidity,
   windDir: state.weather.homePageWeather.windDir,
   windSpeed: state.weather.homePageWeather.windSpeed,
-  location: 'Plaza, Miranda, Venezuela',
+  location: state.search.clickedCity.location,
 });
 
 const CurrentWeather = (props) => {
