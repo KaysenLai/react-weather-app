@@ -7,15 +7,15 @@
 	flex-direction: column;
 	justify-content: center;
 
-	&__rain-drop {
-		color: #618BA8;
-		font-size: 0.8rem;
-		margin-bottom: 13px;
+	&__temp {
+		font-size: 1rem;
+		color: #646464;
+		margin-bottom: 10px;
 	}
 
 	&__icon {
 		font-size: 2.2rem;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
 	}
 
 	&__time {

@@ -16,7 +16,7 @@ const HourlyWeather = (props) => {
 
   return (
     <div className="hourly-weather">
-      <div className="hourly-weather__rain-drop">{temp + '°'}</div>
+      <div className="hourly-weather__temp">{temp + '°'}</div>
       <i
         title="ddd"
         className={classnames('hourly-weather__icon', getWeatherIcon(icon))}

@@ -11,7 +11,7 @@ import {
 
 import MainNav from './components/MainNav/MainNav';
 import Weather from './pages/Weather/Weather';
-import { asyncRequestCurrentWeather } from './store/sagas/actions/asyncActionCreator';
+import { asyncRequestCurrentWeather, asyncRequestSearchImg } from './store/sagas/actions/asyncActionCreator';
 
 function App() {
   const store = useStore();
@@ -25,7 +25,7 @@ function App() {
     // action(REQUEST_DAILY_WEATHER);
     // action(REQUEST_SEARCH_CITY);
     // action(REQUEST_ONE_IMG);
-    // dispatch(asyncRequestCurrentWeather('14.36667,37.38333'));
+    // dispatch(asyncRequestSearchImg('brisbane'));
   }, [dispatch]);
 
   return (

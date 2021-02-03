@@ -39,6 +39,21 @@ export const storeSearchImg = (cityName) => ({
   payload: cityName,
 });
 
+export const setMainImg = (imgData) => ({
+  type: actions.SET_MAIN_IMG,
+  payload: imgData,
+});
+
+export const setSavaBox1Img = (imgData) => ({
+  type: actions.SET_SAVEBOX_1_IMG,
+  payload: imgData,
+});
+
+export const setSavaBox2Img = (imgData) => ({
+  type: actions.SET_SAVEBOX_2_IMG,
+  payload: imgData,
+});
+
 export const storeThemeColor = (colors) => ({
   type: actions.STORE_THEME_COLOR,
   payload: colors,

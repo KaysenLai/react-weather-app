@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 const MainBackGround = (props) => {
   const store = useStore();
   const getColors = (colors) => {
-    store.dispatch(storeThemeColor(colors));
+    setTimeout(store.dispatch(storeThemeColor(colors)), 100);
   };
   const { fullImage, smallImage } = props;
 
