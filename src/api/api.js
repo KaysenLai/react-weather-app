@@ -3,8 +3,8 @@ const prod_weatherKey = process.env.REACT_APP_PROD_WEATHER_KEY;
 const mapboxKey = process.env.REACT_APP_MAPBOX_KEY;
 const imageKey = process.env.REACT_APP_IMG_KEY;
 
-// export const getCurrentWeatherApi = (coordinates) =>
-//   `https://devapi.qweather.com/v7/weather/now?location=${coordinates}&key=${dev_weatherKey}`;
+export const getCurrentWeatherApi = (coordinates) =>
+  `https://devapi.qweather.com/v7/weather/now?location=${coordinates}&key=${dev_weatherKey}`;
 //
 // export const getHourlyWeatherApi = (coordinates) =>
 //   `https://api.qweather.com/v7/weather/24h?location=${coordinates}&key=${prod_weatherKey}`;
@@ -23,7 +23,9 @@ const imageKey = process.env.REACT_APP_IMG_KEY;
 // export const getImgByIdApi = (cityName) =>
 //   `https://api.unsplash.com/search/photos?query=${cityName}&client_id=${imageKey}`;
 
-export const getCurrentWeatherApi = (coordinates) => 'http://localhost:5000/currentWeather';
+// --------------------------------------------------------------------------------------------------
+
+// export const getCurrentWeatherApi = (coordinates) => 'http://localhost:5000/currentWeather';
 
 export const getHourlyWeatherApi = (coordinates) => 'http://localhost:5000/hourlyWeather';
 

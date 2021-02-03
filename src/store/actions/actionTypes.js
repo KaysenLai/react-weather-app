@@ -3,7 +3,7 @@ export const STORE_HOURLY_WEATHER = 'storeHourlyWeather';
 export const STORE_DAILY_WEATHER = 'storeDailyWeather';
 
 export const STORE_SEARCH_CITY = 'storeSearchCity';
-export const STORE_SELECTED_CITY = 'storeSelectedCity';
+export const STORE_CLICKED_CITY = 'storeClickedCity';
 export const CLEAT_SEARCH_CITY = 'clearSearchCity';
 
 export const STORE_ONE_IMG = 'storeOneImg';

@@ -5,9 +5,55 @@
 	height: 180px;
 	border-radius: $borderRadius;
 	box-shadow: 2px 4px 12px -5px rgba(0,0,0,.2);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 40px;
 
-	.wi-night-sleet{
-		font-size: 80px;
-		color: white;
+	&__text {
+		h3 {
+			font-weight: normal;
+			line-height: 1rem;
+		}
+
+		p {
+			color: #b1b1b1;
+		}
+
+		h4 {
+			font-weight: 600;
+			font-size: 4rem;
+			line-height: 5rem;
+		}
+
+		.current-weather__info-wrap {
+			display: flex;
+			flex-wrap: wrap;
+
+			span{
+				font-size: 0.9rem;
+				color: #b1b1b1;
+				margin-right: 1rem;
+				display: block;
+			}
+		}
+	}
+
+	&__icon-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.current-weather__icon {
+			font-size: 60px;
+		}
+
+		.current-weather__weather-text {
+			font-size: 22px;
+			line-height: 50px;
+			font-weight: 500;
+		}
 	}
 }

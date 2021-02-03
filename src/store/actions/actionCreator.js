@@ -20,6 +20,11 @@ export const storeSearchCity = (searchedCities) => ({
   payload: searchedCities,
 });
 
+export const storeClickedCity = (clickedCity) => ({
+  type: actions.STORE_CLICKED_CITY,
+  payload: clickedCity,
+});
+
 export const clearSearchCity = () => ({
   type: actions.CLEAT_SEARCH_CITY,
 });

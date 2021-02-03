@@ -2,9 +2,9 @@ import './SearchBar.scss';
 
 import React, { useState, useEffect } from 'react';
 import { connect, useDispatch, useStore } from 'react-redux';
-import { asyncSearchCity } from '../../store/sagas/actions/asyncActionCreator';
+import { asyncRequestAllData, asyncRequestSearchCity } from '../../store/sagas/actions/asyncActionCreator';
 import classNames from 'classnames';
-import { clearSearchCity } from '../../store/actions/actionCreator';
+import { clearSearchCity, storeClickedCity } from '../../store/actions/actionCreator';
 const mapStateToProps = (state) => ({
   cityList: state.search.searchResponseList,
 });
@@ -22,7 +22,7 @@ const SearchBar = (props) => {
 
   const handleTextChange = (e) => {
     setSearchText(e.target.value);
-    store.dispatch(asyncSearchCity(e.target.value));
+    store.dispatch(asyncRequestSearchCity(e.target.value));
   };
 
   const handleInputFocus = () => setIsFocus(true);
@@ -36,7 +36,9 @@ const SearchBar = (props) => {
   };
 
   const handleClickCityList = (e) => {
-    console.log(e.target.getAttribute('data-id'));
+    const clickedCity = cityList[e.target.getAttribute('data-id')];
+    store.dispatch(storeClickedCity(clickedCity));
+    store.dispatch(asyncRequestAllData());
   };
 
   return (

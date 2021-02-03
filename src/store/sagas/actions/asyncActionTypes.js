@@ -6,3 +6,5 @@ export const REQUEST_SEARCH_CITY = 'requestSearchCity';
 
 export const REQUEST_ONE_IMG = 'requestOneImg';
 export const REQUEST_SEARCH_IMG = 'requestSearchImg';
+
+export const REQUEST_ALL_DATA = 'requestAllData';

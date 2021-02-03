@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './MainNav.scss';
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from '../searchBar/SearchBar';
 import classnames from 'classnames';
 
 const mapStateToProps = (state) => ({

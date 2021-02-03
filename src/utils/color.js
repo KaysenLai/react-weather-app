@@ -22,7 +22,7 @@ export const getThemeColor = (colors) => {
       originColor = '32425C';
   }
   const themeHue = parseInt(tinycolor(originColor).toHsl().h);
-  const primaryColor = tinycolor({ h: themeHue, s: 30, l: 30 }).toHex();
-  const secondColor = tinycolor({ h: themeHue, s: 15, l: 70 }).toHex();
+  const primaryColor = '#' + tinycolor({ h: themeHue, s: 30, l: 30 }).toHex();
+  const secondColor = '#' + tinycolor({ h: themeHue, s: 15, l: 70 }).toHex();
   return { primaryColor, secondColor };
 };

@@ -53,11 +53,10 @@
 
 				&__card-wrap {
 					display: grid;
-					background-color: pink;
 					grid-template-columns: 1fr 1fr 1fr ;
 					grid-template-rows: 1fr 1fr;
 					grid-gap: 5px;
-					padding: 0;
+					padding: 16px;
 					height: unset;
 					li {
 						flex: unset;

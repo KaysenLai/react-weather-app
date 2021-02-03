@@ -1,12 +1,6 @@
 import { call, put } from 'redux-saga/effects';
-import { requestCurrentWeather, requestDailyWeather, requestHourlyWeather } from '../requests/weather';
-import {
-  storeCurrentWeather,
-  storeDailyWeather,
-  storeHourlyWeather,
-  storeOneImg,
-  storeSearchImg,
-} from '../../actions/actionCreator';
+
+import { storeOneImg, storeSearchImg } from '../../actions/actionCreator';
 import { REQUEST_ONE_IMG, REQUEST_SEARCH_IMG } from '../actions/asyncActionTypes';
 import { requestOneImg, requestSearchImg } from '../requests/image';
 

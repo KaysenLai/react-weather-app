@@ -2,8 +2,8 @@ import { REQUEST_SEARCH_CITY } from '../actions/asyncActionTypes';
 import { call, put } from 'redux-saga/effects';
 import { storeSearchCity } from '../../actions/actionCreator';
 import { requestSearchCity } from '../requests/search';
-import { convertLocation } from '../utils/untility';
-import { getPresetImages } from '../utils/presetImages';
+import { convertLocation } from '../../../utils/untility';
+import { getPresetImages } from '../../../utils/presetImages';
 
 export function* asyncHandleSearch(action) {
   if (action.type === REQUEST_SEARCH_CITY) {

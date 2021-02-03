@@ -1,5 +1,5 @@
 import { STORE_THEME_COLOR } from '../actions/actionTypes';
-import { getThemeColor } from '../sagas/utils/color';
+import { getThemeColor } from '../../utils/color';
 
 const initialState = {
   primaryColor: '#4D4D4D',
