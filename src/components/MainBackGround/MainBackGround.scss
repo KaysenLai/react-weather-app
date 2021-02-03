@@ -1,3 +1,5 @@
+@import '../../assets/scss/media-queries';
+
 .main-background {
 	position: absolute;
 	top: 0;
@@ -30,5 +32,13 @@
 		height: 100%;
 		position: absolute;
 		background-color: rgba(18, 18, 18, 0.5);
+	}
+
+	@include MQ(M) {
+		height: 130%;
+	}
+
+	@include MQ(S) {
+		height: 160%;
 	}
 }

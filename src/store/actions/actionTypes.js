@@ -8,3 +8,5 @@ export const CLEAT_SEARCH_CITY = 'clearSearchCity';
 
 export const STORE_ONE_IMG = 'storeOneImg';
 export const STORE_SEARCH_IMG = 'storeSearchImg';
+
+export const STORE_THEME_COLOR = 'storeThemeColor';

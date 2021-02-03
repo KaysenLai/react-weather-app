@@ -1,8 +1,16 @@
+import { STORE_THEME_COLOR } from '../actions/actionTypes';
+import { getThemeColor } from '../sagas/utils/color';
+
 const initialState = {
-  primaryColor: '#32425C',
-  secondColor: '#9CADC9',
+  primaryColor: '#4D4D4D',
+  secondColor: '#B2B2B2',
 };
 
 export default (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case STORE_THEME_COLOR:
+      return getThemeColor(action.payload);
+    default:
+      return state;
+  }
 };

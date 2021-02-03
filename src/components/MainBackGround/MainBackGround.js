@@ -1,25 +1,28 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, useStore } from 'react-redux';
 import ProgressiveImage from '../ProgressiveImage/ProgressiveImage';
 import './MainBackGround.scss';
 import { ColorExtractor } from 'react-color-extractor';
+import { storeThemeColor } from '../../store/actions/actionCreator';
 
 const mapStateToProps = (state) => ({
   fullImage: state.images.currentImages.mainImage.urls.full,
-  thumbnail: state.images.currentImages.mainImage.urls.small,
+  smallImage: state.images.currentImages.mainImage.urls.small,
 });
 
 const MainBackGround = (props) => {
-  const getColors = (color) => {
-    console.log(color);
+  const store = useStore();
+  const getColors = (colors) => {
+    store.dispatch(storeThemeColor(colors));
   };
-  const { fullImage, thumbnail } = props;
+  const { fullImage, smallImage } = props;
+
   return (
     <div className="main-background">
       <div className="main-background__mask" />
-      <ProgressiveImage className="main-background" src={fullImage} thumbnailSrc={thumbnail} />
+      <ProgressiveImage className="main-background" src={fullImage} thumbnailSrc={smallImage} />
       <ColorExtractor getColors={getColors}>
-        <img src="https://i.imgur.com/OCyjHNF.jpg" style={{ display: 'none' }} alt="color-extractor" />
+        <img src={smallImage} style={{ display: 'none' }} alt="color-extractor" />
       </ColorExtractor>
     </div>
   );

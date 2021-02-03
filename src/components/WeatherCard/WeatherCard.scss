@@ -130,7 +130,7 @@
 			.scenery-card {
 				margin-top: $cardGap;
 				margin-right: 20px;
-				height: 230px;
+				height: 180px;
 			}
 
 			.save-boxs {
@@ -143,4 +143,10 @@
 			}
 		}
 	}
+
+	//@include MQ(XS) {
+	//	width: 90%;
+	//	padding: 10px 10px;
+	//	background-color: rosybrown;
+	//}
 }

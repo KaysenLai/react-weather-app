@@ -33,3 +33,8 @@ export const storeSearchImg = (cityName) => ({
   type: actions.STORE_SEARCH_IMG,
   payload: cityName,
 });
+
+export const storeThemeColor = (colors) => ({
+  type: actions.STORE_THEME_COLOR,
+  payload: colors,
+});
