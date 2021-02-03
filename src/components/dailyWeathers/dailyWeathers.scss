@@ -10,12 +10,13 @@
 	}
 
 	&__card-wrap {
-		height: 200px;
+		height: 190px;
 		display: grid;
 		width: 100%;
 		grid-gap: 20px;
 		border-radius: $borderRadius;
 		grid-template-columns: 1fr 1fr;
+		list-style: none;
 
 		.daily-weather {
 			width: 100%;

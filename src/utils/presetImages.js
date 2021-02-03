@@ -41,7 +41,7 @@ const presetImages = {
   fukuoka: 'qTPCqxCR-LA',
   jinan: 'Skm6M0du79Y',
   zhengzhou: 'QnqirwLtCv4',
-  melbourne: 'NHgGemjJb0o',
+  melbourne: 'iFdPrhOPI_E',
   sydney: 'KeDdztmEqVc',
   hefei: 'imYKxcVODCc',
   rome: '0Bs3et8FYyg',

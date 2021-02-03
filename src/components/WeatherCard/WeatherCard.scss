@@ -6,11 +6,11 @@
 	margin: 100px auto 0 auto;
 	width: 90%;
 	max-width: $appWidthXXL;
-
 	border-radius: 20px;
 	box-sizing: border-box;
 	display: flex;
 	padding: 40px 45px;
+	box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
 
 	&__content {
 		flex: 6.4;
@@ -38,7 +38,8 @@
 		max-width: $appWidthXL;
 	}
 
-	@include MQ(M) {
+	@include MQ(L) {
+		max-width: 620px;
 		flex-direction: column;
 		padding: 30px 35px;
 

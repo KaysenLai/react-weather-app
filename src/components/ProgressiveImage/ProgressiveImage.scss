@@ -7,8 +7,8 @@
 		object-fit: cover;
 		width: min-content;
 		position: absolute;
-		filter: blur(80px);
-		transition: opacity ease-in 1000ms;
+		filter: blur(20px);
+		transition: opacity ease 2s;
 		clip-path: inset(0);
 	}
 }

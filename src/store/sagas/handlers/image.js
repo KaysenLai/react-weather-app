@@ -3,6 +3,7 @@ import { call, put, select } from 'redux-saga/effects';
 import { setMainImg, storeOneImg, storeSearchImg } from '../../actions/actionCreator';
 import { REQUEST_ONE_IMG, REQUEST_SEARCH_IMG } from '../actions/asyncActionTypes';
 import { requestOneImg, requestSearchImg } from '../requests/image';
+import { asyncRequestOneImg } from '../actions/asyncActionCreator';
 
 export function* asyncHandleImage(action) {
   switch (action.type) {
@@ -22,6 +23,7 @@ export function* asyncHandleImage(action) {
         const searchImgResponse = yield call(requestSearchImg, cityName);
         yield put(storeSearchImg(parseSearchImg(searchImgResponse)));
         const searchedImgList = yield select(selectSearchedImgList);
+        if (searchedImgList.length === 0) yield put(asyncRequestOneImg('3MAmj1ZKSZA'));
         yield put(setMainImg(searchedImgList[0]));
       } catch (e) {
         console.log(e);

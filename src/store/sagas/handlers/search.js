@@ -33,7 +33,6 @@ const parseSearchCity = (searchCityResponse) => {
 function handleCityName(cityName) {
   const splitName = cityName.split(' ');
   if (splitName.length === 2 && splitName[1] === 'Shi') {
-    console.log(splitName[0]);
     return splitName[0];
   }
   return cityName;

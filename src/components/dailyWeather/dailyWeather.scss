@@ -2,18 +2,41 @@
 
 .daily-weather {
 	background-color: white;
-	height: 110px;
+	height: 100px;
 	width: 300px;
 	border-radius: $borderRadius;
 	box-shadow: 2px 4px 12px -5px rgba(0,0,0,.2);
+	display: flex;
+	justify-content: space-between;
 
-	h2 {
-		font-size: 1.25rem;
-		font-weight: 600;
+	&__icon {
+		font-size: 2.2rem;
+		margin-right: 14px;
 	}
 
-	&__card-wrap {
-		list-style: none;
+	&__left {
 		display: flex;
+		align-items: center;
+		padding-left: 20px;
+
+		h4 {
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+
+		p {
+			color: #9d9d9d;
+		}
+	}
+
+	&__right {
+		color: white;
+		font-weight: 500;
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+		border-radius: $borderRadius
 	}
 }

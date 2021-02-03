@@ -6,14 +6,15 @@ import HourlyWeather from '../hourlyWeather/hourlyWeather';
 
 const mapStateToProps = (state) => ({
   hourlyForecast: state.weather.homePageWeather.hourlyForecast,
+  cityName: state.search.clickedCity.cityName,
   text: state.weather.homePageWeather.text,
 });
 
 const HourlyWeathers = (props) => {
-  const { text, hourlyForecast } = props;
+  const { text, cityName, hourlyForecast } = props;
   return (
     <div className="hourly-weathers">
-      <h2>Hourly Forecast for xx</h2>
+      <h2>Hourly Forecast for {cityName}</h2>
       <ul className="hourly-weathers__card-wrap">
         {hourlyForecast.map(
           (item, index) =>

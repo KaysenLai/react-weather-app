@@ -4,6 +4,7 @@ import { requestSearchCity } from '../requests/search';
 import { setMainImg, storeSearchCity } from '../../actions/actionCreator';
 import {
   asyncRequestCurrentWeather,
+  asyncRequestDailyWeather,
   asyncRequestHourlyWeather,
   asyncRequestOneImg,
   asyncRequestSearchImg,
@@ -22,7 +23,7 @@ export function* asyncHandleAppdata(action) {
       }
       yield put(asyncRequestCurrentWeather(coordinates));
       yield put(asyncRequestHourlyWeather(coordinates));
-      yield put(asyncRequestCurrentWeather(coordinates));
+      yield put(asyncRequestDailyWeather(coordinates));
     } catch (e) {
       console.log(e);
     }

@@ -34,6 +34,10 @@
 		background-color: rgba(18, 18, 18, 0.5);
 	}
 
+	@include MQ(L) {
+		height: 130%;
+	}
+
 	@include MQ(M) {
 		height: 130%;
 	}

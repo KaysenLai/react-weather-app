@@ -1,7 +1,7 @@
 import './SearchBar.scss';
 
-import React, { useState, useEffect } from 'react';
-import { connect, useDispatch, useStore } from 'react-redux';
+import React, { useState } from 'react';
+import { connect, useStore } from 'react-redux';
 import { asyncRequestAllData, asyncRequestSearchCity } from '../../store/sagas/actions/asyncActionCreator';
 import classNames from 'classnames';
 import { clearSearchCity, storeClickedCity } from '../../store/actions/actionCreator';
@@ -20,11 +20,10 @@ const SearchBar = (props) => {
     setSearchText(e.target.value);
     if (!isSearching) {
       setIsSearching(true);
-      setTimeout(() => {
-        store.dispatch(asyncRequestSearchCity(searchText));
-        console.log(e.target.value);
+      setTimeout(async () => {
+        await store.dispatch(asyncRequestSearchCity(searchText));
         setIsSearching(false);
-      }, 1000);
+      }, 500);
     }
   };
 
@@ -35,7 +34,7 @@ const SearchBar = (props) => {
     setSearchText('');
     setTimeout(() => {
       store.dispatch(clearSearchCity());
-    }, 100);
+    }, 200);
   };
 
   const handleClickCityList = (e) => {
