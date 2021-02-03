@@ -6,5 +6,35 @@
 	height: 130px;
 	border-radius: $borderRadius;
 	box-shadow: 2px 4px 12px -5px rgba(0,0,0,.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__dashed-line {
+		width: 80%;
+		height: 70%;
+		background-color: white;
+		border-radius: 15px;
+		border: #b0b0b0 dashed 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		cursor: pointer;
+
+		p{
+			font-size: 0.9rem;
+			color: #b0b0b0;
+			line-height: 30px;
+		}
+
+		.anticon-download {
+			svg {
+				fill: #b0b0b0;
+				font-size: 30px;
+			}
+		}
+	}
+
 
 }

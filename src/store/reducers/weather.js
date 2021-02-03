@@ -1,5 +1,10 @@
 import * as actions from '../actions/actionTypes';
-import { STORE_CURRENT_WEATHER, STORE_DAILY_WEATHER, STORE_HOURLY_WEATHER } from '../actions/actionTypes';
+import {
+  SET_SAVEBOX_WEATHER,
+  STORE_CURRENT_WEATHER,
+  STORE_DAILY_WEATHER,
+  STORE_HOURLY_WEATHER,
+} from '../actions/actionTypes';
 
 const defaultDailyForecast = [
   {
@@ -104,6 +109,19 @@ export default (state = initialState, action) => {
       return { ...state, homePageWeather: { ...state.homePageWeather, hourlyForecast: action.payload } };
     case STORE_DAILY_WEATHER:
       return { ...state, homePageWeather: { ...state.homePageWeather, dailyForecast: action.payload } };
+    case SET_SAVEBOX_WEATHER: {
+      if (action.payload === '1')
+        return {
+          ...state,
+          firstSaveBoxWeather: state.homePageWeather,
+        };
+      if (action.payload === '2')
+        return {
+          ...state,
+          secondSaveBoxWeather: state.homePageWeather,
+        };
+      break;
+    }
     default:
       return state;
   }

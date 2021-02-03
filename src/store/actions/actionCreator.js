@@ -44,13 +44,13 @@ export const setMainImg = (imgData) => ({
   payload: imgData,
 });
 
-export const setSavaBox1Img = (imgData) => ({
-  type: actions.SET_SAVEBOX_1_IMG,
+export const setSavaBoxImg = (imgData) => ({
+  type: actions.SET_SAVEBOX_IMG,
   payload: imgData,
 });
 
-export const setSavaBox2Img = (imgData) => ({
-  type: actions.SET_SAVEBOX_2_IMG,
+export const setSaveboxWeather = (imgData) => ({
+  type: actions.SET_SAVEBOX_WEATHER,
   payload: imgData,
 });
 

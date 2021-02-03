@@ -1,10 +1,4 @@
-import {
-  SET_MAIN_IMG,
-  SET_SAVEBOX_1_IMG,
-  SET_SAVEBOX_2_IMG,
-  STORE_ONE_IMG,
-  STORE_SEARCH_IMG,
-} from '../actions/actionTypes';
+import { SET_MAIN_IMG, SET_SAVEBOX_IMG, STORE_ONE_IMG, STORE_SEARCH_IMG } from '../actions/actionTypes';
 
 const initialState = {
   currentImages: {
@@ -39,10 +33,19 @@ export default (state = initialState, action) => {
       return { ...state, searchedImgList: action.payload };
     case SET_MAIN_IMG:
       return { ...state, currentImages: { ...state.currentImages, mainImage: action.payload } };
-    case SET_SAVEBOX_1_IMG:
-      return { ...state, currentImages: { ...state.currentImages, firstSaveBoxImage: action.payload } };
-    case SET_SAVEBOX_2_IMG:
-      return { ...state, currentImages: { ...state.currentImages, secondSaveBoxImage: action.payload } };
+    case SET_SAVEBOX_IMG: {
+      if (action.payload === '1')
+        return {
+          ...state,
+          currentImages: { ...state.currentImages, firstSaveBoxImage: state.currentImages.mainImage },
+        };
+      if (action.payload === '2')
+        return {
+          ...state,
+          currentImages: { ...state.currentImages, secondSaveBoxImage: state.currentImages.mainImage },
+        };
+      break;
+    }
     default:
       return state;
   }
