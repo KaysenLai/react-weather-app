@@ -1,7 +1,5 @@
 import { REQUEST_ALL_DATA } from '../actions/asyncActionTypes';
 import { call, put, select } from 'redux-saga/effects';
-import { requestSearchCity } from '../requests/search';
-import { setMainImg, storeSearchCity } from '../../actions/actionCreator';
 import {
   asyncRequestCurrentWeather,
   asyncRequestDailyWeather,
@@ -33,4 +31,3 @@ export function* asyncHandleAppdata(action) {
 const selectCityName = (state) => state.search.clickedCity.cityName;
 const selectPresetImage = (state) => state.search.clickedCity.presetImage;
 const selectCoordinates = (state) => state.search.clickedCity.coordinates;
-// const selectMainImgData = (state) => state.images.currentImages.mainImage;

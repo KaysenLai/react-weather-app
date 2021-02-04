@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import MainBackGround from '../../components/MainBackGround/MainBackGround';
 import WeatherCard from '../../components/WeatherCard/WeatherCard';
 
-const Weather = (props) => {
+const Weather = () => {
   return (
     <div className="weather">
       <WeatherCard />

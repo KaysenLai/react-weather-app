@@ -4,7 +4,7 @@ const mapboxKey = process.env.REACT_APP_MAPBOX_KEY;
 const imageKey = process.env.REACT_APP_IMG_KEY;
 
 export const getCurrentWeatherApi = (coordinates) =>
-  `https://devapi.qweather.com/v7/weather/now?location=${coordinates}&key=${dev_weatherKey}`;
+  `https://api.qweather.com/v7/weather/now?location=${coordinates}&key=${prod_weatherKey}`;
 
 export const getHourlyWeatherApi = (coordinates) =>
   `https://api.qweather.com/v7/weather/24h?location=${coordinates}&key=${prod_weatherKey}`;
