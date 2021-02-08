@@ -23,7 +23,7 @@ export const getImgByIdApi = (cityName) =>
 export const searchCityApi = (place) =>
   `https://api.mapbox.com/geocoding/v5/mapbox.places/${place}.json?access_token=${mapboxKey}&cachebuster=1612146300278&autocomplete=true&types=place`;
 
-// --------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------
 
 // export const getCurrentWeatherApi = (coordinates) => 'http://localhost:5000/currentWeather';
 //
